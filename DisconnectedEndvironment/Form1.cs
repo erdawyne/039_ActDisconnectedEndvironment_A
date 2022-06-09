@@ -34,6 +34,26 @@ namespace DisconnectedEndvironment
         {
             // TODO: This line of code loads data into the 'hRDataSet.empdetails' table. You can move, or remove it, as needed.
             this.empdetailsTableAdapter.Fill(this.hRDataSet.empdetails);
+            //This line of code loads data into the
+            //hRDataSet.empdetails table. This would appear in
+            //Form 1_Load event
+            this.empdetailsTableAdapter.Fill(this.hRDataSet.empdetails);
+
+            txtCode.Enabled = false;
+            txtName.Enabled = false;
+            txtAddress.Enabled = false;
+            txtState.Enabled = false;
+            txtCountry.Enabled = false;
+            cbDesignation.Enabled = false;
+            cbDepartement.Enabled = false;
+
+            cbDesignation.Items.Add("MANAGER");
+            cbDesignation.Items.Add("AUTHOR");
+            cbDesignation.Items.Add("Designer");
+            cbDesignation.Items.Add("MARKETING");
+            cbDesignation.Items.Add("FINANCE");
+            cbDesignation.Items.Add("IDD");
+            cmdSave.Enabled = false;
 
         }
 
