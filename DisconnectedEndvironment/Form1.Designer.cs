@@ -33,9 +33,9 @@ namespace DisconnectedEndvironment
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.empdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hRDataSet = new DisconnectedEndvironment.HRDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -74,6 +74,7 @@ namespace DisconnectedEndvironment
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.empdetailsBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empdetailsBindingSource, "cname", true));
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -111,13 +112,6 @@ namespace DisconnectedEndvironment
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // empdetailsBindingSource
             // 
             this.empdetailsBindingSource.DataMember = "empdetails";
@@ -127,6 +121,13 @@ namespace DisconnectedEndvironment
             // 
             this.hRDataSet.DataSetName = "HRDataSet";
             this.hRDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -227,14 +228,14 @@ namespace DisconnectedEndvironment
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(393, 365);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(393, 345);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 180);
+            this.label4.Location = new System.Drawing.Point(3, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 0;
@@ -244,7 +245,7 @@ namespace DisconnectedEndvironment
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 234);
+            this.label5.Location = new System.Drawing.Point(3, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 0;
@@ -254,7 +255,7 @@ namespace DisconnectedEndvironment
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 286);
+            this.label6.Location = new System.Drawing.Point(3, 266);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 17);
             this.label6.TabIndex = 0;
@@ -264,7 +265,7 @@ namespace DisconnectedEndvironment
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 334);
+            this.label7.Location = new System.Drawing.Point(3, 314);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 17);
             this.label7.TabIndex = 0;
@@ -274,7 +275,7 @@ namespace DisconnectedEndvironment
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 69);
+            this.label2.Location = new System.Drawing.Point(3, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 17);
             this.label2.TabIndex = 0;
@@ -284,7 +285,7 @@ namespace DisconnectedEndvironment
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 126);
+            this.label3.Location = new System.Drawing.Point(3, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 0;
@@ -294,7 +295,7 @@ namespace DisconnectedEndvironment
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 15);
+            this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 17);
             this.label1.TabIndex = 0;
@@ -306,22 +307,26 @@ namespace DisconnectedEndvironment
             this.txtCode.Location = new System.Drawing.Point(199, 3);
             this.txtCode.Multiline = true;
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(191, 40);
+            this.txtCode.Size = new System.Drawing.Size(191, 33);
             this.txtCode.TabIndex = 1;
             this.txtCode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(199, 51);
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empdetailsBindingSource, "cname", true));
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.empdetailsBindingSource, "cname", true));
+            this.txtName.Location = new System.Drawing.Point(199, 42);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(191, 46);
+            this.txtName.Size = new System.Drawing.Size(191, 42);
             this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(199, 110);
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.empdetailsBindingSource, "caddress", true));
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empdetailsBindingSource, "caddress", true));
+            this.txtAddress.Location = new System.Drawing.Point(199, 90);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(191, 43);
@@ -330,7 +335,8 @@ namespace DisconnectedEndvironment
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(199, 219);
+            this.txtCountry.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empdetailsBindingSource, "ccountry", true));
+            this.txtCountry.Location = new System.Drawing.Point(199, 199);
             this.txtCountry.Multiline = true;
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(176, 44);
@@ -339,23 +345,26 @@ namespace DisconnectedEndvironment
             // 
             // cbDesignation
             // 
+            this.cbDesignation.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empdetailsBindingSource, "cDesignation", true));
             this.cbDesignation.FormattingEnabled = true;
-            this.cbDesignation.Location = new System.Drawing.Point(199, 272);
+            this.cbDesignation.Location = new System.Drawing.Point(199, 252);
             this.cbDesignation.Name = "cbDesignation";
             this.cbDesignation.Size = new System.Drawing.Size(191, 24);
             this.cbDesignation.TabIndex = 2;
             // 
             // cbDepartement
             // 
+            this.cbDepartement.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.empdetailsBindingSource, "cDepartment", true));
             this.cbDepartement.FormattingEnabled = true;
-            this.cbDepartement.Location = new System.Drawing.Point(199, 323);
+            this.cbDepartement.Location = new System.Drawing.Point(199, 303);
             this.cbDepartement.Name = "cbDepartement";
             this.cbDepartement.Size = new System.Drawing.Size(191, 24);
             this.cbDepartement.TabIndex = 2;
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(199, 165);
+            this.txtState.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empdetailsBindingSource, "cstate", true));
+            this.txtState.Location = new System.Drawing.Point(199, 145);
             this.txtState.Multiline = true;
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(176, 39);
