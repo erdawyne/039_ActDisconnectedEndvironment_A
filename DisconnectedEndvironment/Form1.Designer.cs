@@ -256,9 +256,9 @@ namespace DisconnectedEndvironment
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 334);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 17);
+            this.label7.Size = new System.Drawing.Size(82, 17);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Departement";
+            this.label7.Text = "Department";
             // 
             // label2
             // 
@@ -360,6 +360,7 @@ namespace DisconnectedEndvironment
             this.cmdAdd.TabIndex = 2;
             this.cmdAdd.Text = "Add";
             this.cmdAdd.UseVisualStyleBackColor = true;
+            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click);
             // 
             // cmdSave
             // 
