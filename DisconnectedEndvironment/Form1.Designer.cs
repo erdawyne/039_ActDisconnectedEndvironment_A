@@ -256,9 +256,9 @@ namespace DisconnectedEndvironment
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 334);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 17);
+            this.label7.Size = new System.Drawing.Size(90, 17);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Department";
+            this.label7.Text = "Departement";
             // 
             // label2
             // 

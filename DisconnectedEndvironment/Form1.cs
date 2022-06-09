@@ -76,7 +76,7 @@ namespace DisconnectedEndvironment
             txtState.Text = "";
             txtCountry.Text = "";
             cbDesignation.Text = "";
-            cbDepartment.Text = "";
+            cbDepartement.Text = "";
             int ctr, len;
             string codeval;
             dt = hRDataSet.Tables["empdetails"];
