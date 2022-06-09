@@ -12,6 +12,9 @@ namespace DisconnectedEndvironment
 {
     public partial class Form1 : Form
     {
+        DataTable dt;
+        DataRow dr;
+        string code;
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +34,11 @@ namespace DisconnectedEndvironment
         {
             // TODO: This line of code loads data into the 'hRDataSet.empdetails' table. You can move, or remove it, as needed.
             this.empdetailsTableAdapter.Fill(this.hRDataSet.empdetails);
+
+        }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
 
         }
     }
